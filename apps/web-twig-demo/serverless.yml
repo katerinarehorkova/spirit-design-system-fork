@@ -4,17 +4,19 @@ service: spirit-web-twig-demo
 provider:
   name: aws
   # The AWS region in which to deploy (us-east-1 is the default)
-  region: eu-central-1
+  region: eu-west-1
   # The stage of the application, e.g. dev, production, staging… ('dev' is the default)
   stage: dev
   runtime: provided.al2
   environment:
     # Symfony environment variables
     APP_ENV: prod
+    BREF_PING_DISABLE: 1
 
 plugins:
   - ./vendor/bref/bref
   - serverless-lift
+
 functions:
   # This function runs the Symfony website/API
   web:

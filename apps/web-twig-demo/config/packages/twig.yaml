@@ -2,8 +2,9 @@ twig:
   default_path: '%kernel.project_dir%/templates'
   paths:
     '%kernel.project_dir%/vendor/lmc/spirit-web-twig-bundle/src/Resources/components': 'components'
-    # '%kernel.project_dir%/vendor/lmc/spirit-web-twig-bundle/src/Resources/helpers': 'helpers'
-    # '%kernel.project_dir%/vendor/lmc/spirit-web-twig-bundle/src/Resources/icons': 'icons'
+    '%kernel.project_dir%/vendor/lmc/spirit-web-twig-bundle/src/Resources/helpers': 'helpers'
+    '%kernel.project_dir%/vendor/lmc/spirit-web-twig-bundle/src/Resources/icons': 'icons'
+    '%kernel.project_dir%/vendor/lmc/spirit-web-twig-bundle/docs/components': spirit
 
 when@test:
   twig:

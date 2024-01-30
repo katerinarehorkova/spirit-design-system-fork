@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "efb1cd85bb283b8ab2ec0a1809f90aa2",
+  "content-hash": "4cee6d1f4a14523b4d1a8318719f7fa6",
   "packages": [
     {
       "name": "async-aws/core",
@@ -284,16 +284,10 @@
     {
       "name": "lmc/spirit-web-twig-bundle",
       "version": "2.9.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/lmc-eu/spirit-web-twig-bundle.git",
-        "reference": "1b46bfa0a1f10341721405b25001d377586d151b"
-      },
       "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/lmc-eu/spirit-web-twig-bundle/zipball/1b46bfa0a1f10341721405b25001d377586d151b",
-        "reference": "1b46bfa0a1f10341721405b25001d377586d151b",
-        "shasum": ""
+        "type": "path",
+        "url": "../../packages/web-twig",
+        "reference": "ae343741a6c306f2fda761d4bb600b0fdd07f80f"
       },
       "require": {
         "ext-simplexml": "*",
@@ -323,7 +317,21 @@
           "Lmc\\SpiritWebTwigBundle\\": "src/"
         }
       },
-      "notification-url": "https://packagist.org/downloads/",
+      "autoload-dev": {
+        "psr-4": {
+          "Lmc\\SpiritWebTwigBundle\\": "tests/"
+        }
+      },
+      "scripts": {
+        "ecs": ["vendor/bin/ecs check --no-progress-bar --ansi  src/ tests/"],
+        "ecs:fix": ["vendor/bin/ecs check --no-progress-bar --ansi --fix  src/ tests/"],
+        "phpunit": ["vendor/bin/phpunit"],
+        "phpunit:coverage": ["XDEBUG_MODE=coverage vendor/bin/phpunit"],
+        "phpunit:update": ["vendor/bin/phpunit -d --update-snapshots"],
+        "phpstan": ["vendor/bin/phpstan analyze"],
+        "tests": ["@ecs", "@phpunit", "@phpstan"],
+        "analyze": ["@ecs", "@phpstan"]
+      },
       "license": ["MIT"],
       "authors": [
         {
@@ -331,11 +339,10 @@
         }
       ],
       "description": "This is Symfony bundle with twig implementation of the Spirit Design System components and extends the twig implementation with an HTML-like syntax.",
-      "support": {
-        "issues": "https://github.com/lmc-eu/spirit-web-twig-bundle/issues",
-        "source": "https://github.com/lmc-eu/spirit-web-twig-bundle/tree/2.9.0"
-      },
-      "time": "2024-01-17T09:18:55+00:00"
+      "transport-options": {
+        "symlink": false,
+        "relative": true
+      }
     },
     {
       "name": "lmc/twigx-bundle",
