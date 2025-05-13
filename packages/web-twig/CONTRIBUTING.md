@@ -168,6 +168,14 @@ Or
 
 - use `make publish pkg=web-twig` in repository root to publish changes to remote.
 
+Then switch to the `lmc-eu/spirit-web-twig-bundle` repository locally and tag the latest commit with the new version.
+
+- `git pull`
+- `git tag -a <version> m "@lmc-eu/spirit-web-twig@<version>"` (e.g. `git tag -a 4.6.0 -m "@lmc-eu/spirit-web-twig@4.6.0`)
+- `git push --tags`
+
+After these steps, the new version will be available on Packagist.
+
 [automate-release-process]: https://github.com/lmc-eu/spirit-design-system/issues/393
 [default-filter-issue]: https://github.com/twigphp/Twig/issues/769
 [default-filter-documentation]: https://twig.symfony.com/doc/2.x/filters/default.html
