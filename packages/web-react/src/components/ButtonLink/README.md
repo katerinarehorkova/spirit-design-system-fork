@@ -19,7 +19,7 @@ import { ButtonLink } from '@lmc-eu/spirit-web-react';
 
 ### How to Make a Fluid Button
 
-To span a button to the full width of its parent, you can use display utility classes or `Grid` to achieve the desired layout.
+To span a `ButtonLink` to the full width of its parent, you can use display utility classes or `Grid` to achieve the desired layout.
 
 ```jsx
 <div className="d-grid">
