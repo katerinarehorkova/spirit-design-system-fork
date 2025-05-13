@@ -73,9 +73,5 @@ export default meta;
 type Story = StoryObj<typeof ButtonLink>;
 
 export const Playground: Story = {
-  args: {
-    isBlock: true,
-  },
-
   name: 'ButtonLink',
 };

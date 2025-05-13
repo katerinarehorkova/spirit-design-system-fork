@@ -16,8 +16,8 @@ const ButtonBlock = () => {
       {sizes.map((size) => (
         <DocsSection key={size} title={`Size ${size}`} container="none" hasPadding={false}>
           {colors.map((color) => (
-            <Grid cols={1} spacing="space-400" key={color}>
-              <Button size={size} color={color} elementType="a">
+            <Grid key={color} cols={1} spacing="space-400">
+              <Button elementType="a" href="#" size={size} color={color}>
                 {`Button ${color}`}
               </Button>{' '}
               <Button size={size} color={color}>

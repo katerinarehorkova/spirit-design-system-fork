@@ -18,7 +18,7 @@ const ButtonDemoFactory = ({ ...props }: ButtonBaseProps) => {
         <DocsSection key={size} title={`Size ${size}`} container="none" hasPadding={false}>
           {colors.map((color) => (
             <div key={color}>
-              <Button size={size} color={color} elementType="a" {...props}>
+              <Button elementType="a" href="#" size={size} color={color} {...props}>
                 {`Button ${color}`}
               </Button>{' '}
               <Button size={size} color={color} {...props}>

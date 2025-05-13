@@ -28,7 +28,7 @@ export function useButtonStyleProps<T extends ElementType = 'button', C = void, 
   // @see https://jira.almacareer.tech/browse/DS-1897
   useDeprecationMessage({
     method: 'property',
-    trigger: isBlock === true,
+    trigger: !!isBlock,
     componentName: 'Button',
     propertyProps: {
       delete: true,

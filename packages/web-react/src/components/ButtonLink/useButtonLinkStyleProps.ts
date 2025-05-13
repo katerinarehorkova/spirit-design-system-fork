@@ -28,7 +28,7 @@ export function useButtonLinkStyleProps<T extends ElementType = 'button', C = vo
   // @see https://jira.almacareer.tech/browse/DS-1897
   useDeprecationMessage({
     method: 'property',
-    trigger: isBlock === true,
+    trigger: !!isBlock,
     componentName: 'ButtonLink',
     propertyProps: {
       delete: true,
