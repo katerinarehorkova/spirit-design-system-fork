@@ -34,14 +34,14 @@ Without lexer:
 
 ### How to Make a Fluid Button
 
-To span a button to the full width of its parent, you can use display utility classes or the `Grid` component to achieve the desired layout.
+To span a `Button` to the full width of its parent, you can use display utility classes or the `Grid` component to achieve the desired layout.
 
 ```twig
 <div className="d-grid">
-  <Button>Primary block-level Button</ButtonLink>
+  <Button>Primary block-level Button</Button>
 </div>
 <div className="d-grid d-tablet-block">
-  <Button>Primary responsive block-level Button</ButtonLink>
+  <Button>Primary responsive block-level Button</Button>
 </div>
 <Grid
   cols="{{ { mobile: 1, tablet: 2 } }}"
