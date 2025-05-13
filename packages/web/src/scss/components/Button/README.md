@@ -17,7 +17,7 @@ Block-level Button:
 
 ⚠️ DEPRECATION NOTICE: The `Button--block` modifier is deprecated and will be removed in the next major release.
 
-To span a button to the full width of its parent, you can use display utility classes or the `Grid` classes to achieve the desired layout.
+To span a `Button` to the full width of its parent, you can use display utility classes or the `Grid` classes to achieve the desired layout.
 
 ```html
 <div class="d-grid">
