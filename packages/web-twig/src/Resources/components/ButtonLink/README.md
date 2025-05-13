@@ -27,26 +27,31 @@ Without lexer:
 {% endembed %}
 ```
 
-## ⚠️ DEPRECATION NOTICE
+### How to Make a Fluid Button
 
-Property `isBlock` is deprecated and will be removed in the next major release.
-Use display utility classes or `Grid` classes to achieve desired layout.
+To span a button to the full width of its parent, you can use display utility classes or `Grid` to achieve the desired layout.
 
 ```twig
-<div class="d-grid">
-  <Button>Primary block-level Button</Button>
+<div className="d-grid">
+  <ButtonLink>Primary block-level Button</ButtonLink>
 </div>
-<div class="d-grid d-inline-flex--tablet">
-  <Button>Primary responsive block-level Button</Button>
+<div className="d-grid d-tablet-block">
+  <ButtonLink>Primary responsive block-level Button</ButtonLink>
 </div>
 <Grid
-  cols="{{ mobile: 1, tablet: 2 }}"
+  cols="{{ { mobile: 1, tablet: 2 } }}"
   spacing="space-1100"
 >
-  <Button>Primary responsive block-level Button</ButtonLink>
+  <Button>Primary responsive block-level Button</Button>
   <ButtonLink href="#">Primary responsive block-level Button</ButtonLink>
-</div>
+</Grid>
 ```
+
+## DEPRECATION NOTICE
+
+Property `isBlock` is deprecated and will be removed in the next major release.
+
+For more information, please read the section [How to Make a Fluid Button](#how-to-make-a-fluid-button).
 
 ## API
 
@@ -54,7 +59,7 @@ Use display utility classes or `Grid` classes to achieve desired layout.
 | --------------- | ------------------------------------------------------------------------------------------------ | --------- | -------- | -------------------------------------------------------------------------------------- |
 | `color`         | [Action Button Color dictionary][dictionary-color], [Emotion Color dictionary][dictionary-color] | `primary` | ✕        | Color variant                                                                          |
 | `href`          | `string`                                                                                         | —         | ✓        | Link URL                                                                               |
-| `isBlock`       | `bool`                                                                                           | `false`   | ✕        | [**DEPRECATED**][readme-deprecations] Span the element to the full width of its parent |
+| `isBlock`       | `bool`                                                                                           | `false`   | ✕        | [**DEPRECATED**](#deprecation-notice) Span the element to the full width of its parent |
 | `isDisabled`    | `bool`                                                                                           | `false`   | ✕        | If true, ButtonLink is disabled                                                        |
 | `isLoading`     | `bool`                                                                                           | `false`   | ✕        | If true, ButtonLink is in a loading state, disabled and the Spinner is visible         |
 | `isSymmetrical` | `bool`                                                                                           | `false`   | ✕        | If true, ButtonLink has symmetrical dimensions, usually only with an Icon              |
@@ -70,6 +75,5 @@ and [escape hatches][readme-escape-hatches].
 [dictionary-color]: https://github.com/lmc-eu/spirit-design-system/tree/main/docs/DICTIONARIES.md#color
 [dictionary-size]: https://github.com/lmc-eu/spirit-design-system/tree/main/docs/DICTIONARIES.md#size
 [readme-additional-attributes]: https://github.com/lmc-eu/spirit-design-system/blob/main/packages/web-twig/README.md#additional-attributes
-[readme-deprecations]: https://github.com/lmc-eu/spirit-design-system/blob/main/packages/web-twig/README.md#deprecations
 [readme-escape-hatches]: https://github.com/lmc-eu/spirit-design-system/blob/main/packages/web-twig/README.md#escape-hatches
 [readme-style-props]: https://github.com/lmc-eu/spirit-design-system/blob/main/packages/web-twig/README.md#style-props
