@@ -27,7 +27,7 @@ Without lexer:
 {% endembed %}
 ```
 
-### How to Make a Fluid Button
+## How to Make a Fluid Button
 
 To span a `ButtonLink` to the full width of its parent, you can use display utility classes or `Grid` to achieve the desired layout.
 
