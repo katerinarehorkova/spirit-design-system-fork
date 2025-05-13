@@ -171,13 +171,14 @@ Or
 Then switch to the `lmc-eu/spirit-web-twig-bundle` repository locally and tag the latest commit with the new version.
 
 - `git pull`
-- `git tag -a <version> m "@lmc-eu/spirit-web-twig@<version>"` (e.g. `git tag -a 4.6.0 -m "@lmc-eu/spirit-web-twig@4.6.0`)
+- `git tag -a <version> m "@lmc-eu/spirit-web-twig@<version>"` (e.g. `git tag -a 4.6.0 -m "@lmc-eu/spirit-web-twig@4.6.0"`)
 - `git push --tags`
 
-After these steps, the new version will be available on Packagist.
+After these steps, the new version will be available on [Packagist][packagist-spirit-web-twig-bundle].
 
 [automate-release-process]: https://github.com/lmc-eu/spirit-design-system/issues/393
 [default-filter-issue]: https://github.com/twigphp/Twig/issues/769
 [default-filter-documentation]: https://twig.symfony.com/doc/2.x/filters/default.html
 [makefile]: https://github.com/lmc-eu/spirit-design-system/blob/main/packages/web-twig/Makefile
+[packagist-spirit-web-twig-bundle]: https://packagist.org/packages/lmc/spirit-web-twig-bundle
 [raw]: https://twig.symfony.com/doc/3.x/filters/raw.html
