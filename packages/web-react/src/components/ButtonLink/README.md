@@ -37,7 +37,7 @@ To span a `ButtonLink` to the full width of its parent, you can use display util
 </Grid>
 ```
 
-## DEPRECATION NOTICE
+### DEPRECATION NOTICE
 
 Property `isBlock` is deprecated and will be removed in the next major release.
 
