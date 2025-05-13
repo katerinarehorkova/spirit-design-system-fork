@@ -46,6 +46,10 @@ const config: StorybookConfig = {
               resolve(__dirname, '../../node_modules'),
               resolve(__dirname, '../../node_modules/@lmc-eu/spirit-design-tokens/src/scss'),
             ],
+            // Prevent warnings because of Sass breaking change how to handle mixed and nested rules.
+            // https://sass-lang.com/documentation/breaking-changes/mixed-decls/
+            // https://github.com/sass/dart-sass/issues/2280.
+            silenceDeprecations: ['mixed-decls'],
           },
         },
       },
