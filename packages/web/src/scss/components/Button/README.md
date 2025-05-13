@@ -15,20 +15,15 @@ Variants:
 
 Block-level Button:
 
-## ⚠️ DEPRECATION NOTICE
+⚠️ DEPRECATION NOTICE: The `Button--block` modifier is deprecated and will be removed in the next major release.
 
-CSS modifiers `Button--isBlock` is deprecated and will be removed in the next major release.
-Use display utility classes or `Grid` classes to achieve desired layout.
-
-```html
-<button type="button" class="Button Button--primary Button--medium Button--block">Primary block-level Button</button>
-```
+To span a button to the full width of its parent, you can use display utility classes or the `Grid` classes to achieve the desired layout.
 
 ```html
 <div class="d-grid">
   <button type="button" class="Button Button--primary Button--medium">Primary block-level Button</button>
 </div>
-<div class="d-grid d-inline-flex--tablet">
+<div class="d-grid d-tablet-block">
   <button type="button" class="Button Button--primary Button--medium">Primary responsive block-level Button</button>
 </div>
 <div
