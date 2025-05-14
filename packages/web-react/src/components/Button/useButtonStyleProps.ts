@@ -27,13 +27,11 @@ export function useButtonStyleProps<T extends ElementType = 'button', C = void, 
 
   // @see https://jira.almacareer.tech/browse/DS-1897
   useDeprecationMessage({
-    method: 'property',
+    method: 'custom',
     trigger: !!isBlock,
     componentName: 'Button',
-    propertyProps: {
-      delete: true,
-      deprecatedName: 'isBlock',
-    },
+    customText:
+      "The `isBlock` property will be deleted in the next major release. Please read component's documentation for more information.",
   });
 
   const buttonClass = useClassNamePrefix('Button');
