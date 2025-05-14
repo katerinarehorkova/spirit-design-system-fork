@@ -1,6 +1,11 @@
 import { Token, TokenGroup, TokenType, TypographyToken } from '@supernovaio/sdk-exporters';
-import { formatTypographyName, getBreakpoint, getTokenAlias, normalizeFirstNamePart } from '../helpers/objectHelper';
-import { deepMergeObjects } from '../helpers/objectHelper';
+import {
+  formatTypographyName,
+  getBreakpoint,
+  getTokenAlias,
+  normalizeFirstNamePart,
+  deepMergeObjects,
+} from '../helpers/objectHelper';
 import { sortTokens, tokenVariableName, typographyValue } from '../helpers/tokenHelper';
 import { toCamelCase } from '../helpers/stringHelper';
 import { COLOR_JS_SUFFIX, COLOR_KEY, COLOR_SCSS_SUFFIX, TYPOGRAPHY_KEY } from '../constants';
