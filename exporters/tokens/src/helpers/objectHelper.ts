@@ -61,18 +61,19 @@ export const convertToJs = (obj: StylesObjectType): string => {
     .map(([key, value]) => {
       const match = key.match(/^_(\d+)/); // Match keys starting with _ followed by a number
       const newKey = match ? `'${match[1]}'` : key; // Replace with the number as a string if matched
+      let resultEntry = `${newKey}: ${value},\n`;
 
       if (typeof value === 'object' && value !== null) {
         const nestedObject = convertToJs(value as StylesObjectType);
 
-        return `${newKey}: {\n${nestedObject}\n},\n`;
+        resultEntry = `${newKey}: {\n${nestedObject}\n},\n`;
       }
 
       if (newKey === value) {
-        return `${newKey},\n`;
+        resultEntry = `${newKey},\n`;
       }
 
-      return `${newKey}: ${value},\n`;
+      return resultEntry;
     })
     .join('')
     .slice(0, -1);
